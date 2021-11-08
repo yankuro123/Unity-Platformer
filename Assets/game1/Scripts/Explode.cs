@@ -36,11 +36,12 @@ public class Explode : MonoBehaviour
         {
 
             OnExplode();
-            Invoke("Die", 2.0f);
+            Invoke("Die", 1.0f);
+            Debug.Log("Triggered");
             
         }
     }
-    void OnExplode()
+    public void OnExplode()
     {
         var t = transform;
 
