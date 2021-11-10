@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     public float speed = 150f;
@@ -11,12 +10,13 @@ public class Player : MonoBehaviour
     public float standingThreshold = 10f;
     public float airSpeedMultiplier = 0.3f;
     public float max = 99999999999f;
+    public static bool isDead;
 
     private Rigidbody2D body2D;
     private SpriteRenderer renderer2D;
     private PlayerController controller;
     private Animator animator;
-    private bool isDead = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -86,5 +86,10 @@ public class Player : MonoBehaviour
              transform.position = currentPosition;
 
         }
+        else
+        {
+            PlayerController.MovingEnable = false;
+        }
+
     }
 }

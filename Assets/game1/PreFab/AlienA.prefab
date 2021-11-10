@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992232724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -5.4, z: 0}
-  m_LocalScale: {x: 19.742645, y: 14.270766, z: 1}
+  m_LocalPosition: {x: 0.9, y: -4.4, z: 0}
+  m_LocalScale: {x: 8.852602, y: 7.4650383, z: 1}
   m_Children: []
   m_Father: {fileID: 3453218116879703376}
   m_RootOrder: 3
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1388840789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SightStart
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -121,8 +121,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827732022}
-  m_Layer: 0
-  m_Name: AvoidGap
+  m_Layer: 11
+  m_Name: AvoidEachother
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827732021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.11, y: -9.89, z: 0}
+  m_LocalPosition: {x: 12.04, y: -5.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3453218116879703376}
@@ -151,7 +151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886563878}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AvoidWall
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 4907104032454959038}
   - component: {fileID: 6942057489664674013}
   - component: {fileID: 240562311}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: AlienA
   m_TagString: Deadly
   m_Icon: {fileID: 0}
@@ -397,15 +397,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911460454527596650}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f05cad58b6005c49a422d0b738f096e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sightStart: {fileID: 1388840789}
   sightEnd: {fileID: 1827732022}
-  layer: Solid
-  needCollsion: 0
+  layer: Monster
+  needCollsion: 1
   standing: 0
   standingThreshold: 4
 --- !u!114 &6942057489664674013

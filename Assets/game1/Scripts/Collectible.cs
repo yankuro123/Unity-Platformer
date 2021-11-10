@@ -22,7 +22,7 @@ public class Collectible : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (Target.gameObject.tag == "Deadly")
+        else if (Target.gameObject.tag == "Deadly" || Target.gameObject.tag == "Eating")
         {
             Destroy(gameObject);
         }

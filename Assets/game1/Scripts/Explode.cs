@@ -25,26 +25,28 @@ public class Explode : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Deadly")
-        {
-            OnExplode();
-
-        }
+            if (Player.isDead == false) 
+                {
+                    if (Player.isDead == false)
+                    {
+                         OnExplode();                         
+                        Invoke("Die", 2.0f);
+                    }
+                }
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Deadly")
-        {
-
-            OnExplode();
-            Invoke("Die", 1.0f);
-            Debug.Log("Triggered");
-            
-        }
+            if (Player.isDead == false)
+            {
+                OnExplode();
+                Invoke("Die", 2.0f);
+                Debug.Log("Triggered");    
+            }
     }
     public void OnExplode()
     {
         var t = transform;
-
         for (int i = 0; i < totalDebris; i++)
         {
             t.TransformPoint(0, -100, 0);
@@ -55,7 +57,7 @@ public class Explode : MonoBehaviour
         }
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-
+        Player.isDead = true;
     }
     void Die()
     {

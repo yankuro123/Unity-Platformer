@@ -17,7 +17,7 @@ public class AlienB : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D target)
     {
-        if (target.gameObject.tag == "Player")
+        if (target.gameObject.tag == "Player" || target.gameObject.tag == "Crystal")
         {
             if (Ready)
             {

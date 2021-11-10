@@ -22,6 +22,7 @@ public class ClickToContinue : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && !loadLock)
         {
             LoadScene();
+            Player.isDead = false;
         }
     }
     void LoadScene()
